@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Attacks!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div clas="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  </div>
+  <!-- Mars data -->
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron-fluid">
+          <h2>Latest Mars News</h2>
+          <h3>{{mars_stuff.News_Title}}</h3>
+          <p>{{mars_stuff.News_p}}</p>
+          <hr class='my-4'>
+          <h2>Featured Mars Image</h2>
+          <img src={{mars_stuff.Featured_Image}} width="100%" height="100%"/>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class='jumbotron-fluid'>
+          <h4>Current Weather on Mars</h4>
+          <p>{{mars_stuff.Weather}}</p>
+          <hr class="my-4">
+          <table class="table table-bordered table-hover table-condensed">{{mars_stuff.Facts|safe}}</table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron-fluid">
+          <div class="col-md-12">
+            <h2 class="display-3">Mars Hemispheres</h2>
+            <ht class="my-4">
+          <div class="col-md-6">
+            <img src={{mars_stuff.Hemispheres[0].img_url }}  width="100%" height="100%"/>
+            <h2>{{mars_stuff.Hemispheres[0].title}}</h2>
+          </div>
+          <div class="col-md-6">
+            <img src={{mars_stuff.Hemispheres[1].img_url }} width="100%" height="100%"/>
+            <h2>{{mars_stuff.Hemispheres[1].title}}</h2>
+          </div>
+          <div class="col-md-6">
+            <img src={{mars_stuff.Hemispheres[2].img_url }} width="100%" height="100%"/>
+            <h2>{{mars_stuff.Hemispheres[2].title}}</h2>
+          </div>
+          <div class="col-md-6">
+            <img src={{mars_stuff.Hemispheres[3].img_url }} width="100%" height="100%"/>
+            <h2>{{mars_stuff.Hemispheres[3].title}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
